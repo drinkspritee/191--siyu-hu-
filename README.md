@@ -83,6 +83,12 @@ dhcp-v112-222:3-way-merge siyuhu$ git log --oneline --graph --all
 * e060df6 Word ordering
 * 6ccb858 Mention `less` in SHELL-BASICS.md
 * f805e2a Added kata for .gitattributes
+* 8ebb496 (greeting) Add greeting
+* f8712d5 (HEAD -> master, origin/master, origin/HEAD) Add missing shebang in sq
+uashing/setup.sh
+* e060df6 Word ordering
+* 6ccb858 Mention `less` in SHELL-BASICS.md
+* f805e2a Added kata for .gitattributes
 * 9669044 Simplify `git lol` alias
 * 892d64f Fix link in squashing-README
 | * c13fcff (origin/Expand_on_submodule_kata) Fix three typos
@@ -100,4 +106,29 @@ dhcp-v112-222:3-way-merge siyuhu$ git log --oneline --graph --all
 * e52649c Added to The task in merge-conflict/README.md
 * ac8f6c2 Added The task to commit-on-wrong-branch/README.md
 * 2e29b3b Added the task section to bad-commit/README.md
-:
+
+[1]+  Stopped                 git log --oneline --graph --all
+dhcp-v112-222:3-way-merge siyuhu$ git add README.md
+dhcp-v112-222:3-way-merge siyuhu$ git git diff greeting.txt README.md
+git: 'git' is not a git command. See 'git --help'.
+
+The most similar command is
+	init
+dhcp-v112-222:3-way-merge siyuhu$ git diff greeting.txt README.md
+fatal: ambiguous argument 'greeting.txt': unknown revision or path not in the working tree.
+Use '--' to separate paths from revisions, like this:
+'git <command> [<revision>...] -- [<file>...]'
+dhcp-v112-222:3-way-merge siyuhu$ git merge greeting.txt README.md
+merge: greeting.txt - not something we can merge
+dhcp-v112-222:3-way-merge siyuhu$ git merge greeting 
+Updating f8712d5..8ebb496
+Fast-forward
+ 3-way-merge/greeting.txt | 3 +++
+ 1 file changed, 3 insertions(+)
+ create mode 100644 3-way-merge/greeting.txt
+dhcp-v112-222:3-way-merge siyuhu$ git diff greeting master
+dhcp-v112-222:3-way-merge siyuhu$ git merge greeting mater
+merge: mater - not something we can merge
+dhcp-v112-222:3-way-merge siyuhu$ git merge greeting master
+Already up to date.
+dhcp-v112-222:3-way-merge siyuhu$ 
